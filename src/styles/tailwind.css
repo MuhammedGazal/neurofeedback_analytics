@@ -1,0 +1,171 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  /* Primary Colors */
+  --color-primary: #00D4FF; /* Electric cyan - primary */
+  --color-primary-50: #E6FBFF; /* Very light cyan */
+  --color-primary-100: #CCF7FF; /* Light cyan */
+  --color-primary-200: #99EFFF; /* Medium light cyan */
+  --color-primary-300: #66E7FF; /* Medium cyan */
+  --color-primary-400: #33DFFF; /* Medium dark cyan */
+  --color-primary-500: #00D4FF; /* Electric cyan (primary) */
+  --color-primary-600: #00AACC; /* Dark cyan */
+  --color-primary-700: #008099; /* Darker cyan */
+  --color-primary-800: #005566; /* Very dark cyan */
+  --color-primary-900: #002B33; /* Darkest cyan */
+
+  /* Secondary Colors */
+  --color-secondary: #7C3AED; /* Deep violet - secondary */
+  --color-secondary-50: #F3F0FF; /* Very light violet */
+  --color-secondary-100: #E7E0FF; /* Light violet */
+  --color-secondary-200: #CFC1FF; /* Medium light violet */
+  --color-secondary-300: #B7A2FF; /* Medium violet */
+  --color-secondary-400: #9F83FF; /* Medium dark violet */
+  --color-secondary-500: #8764FF; /* Bright violet */
+  --color-secondary-600: #7C3AED; /* Deep violet (secondary) */
+  --color-secondary-700: #6B21A8; /* Dark violet */
+  --color-secondary-800: #581C87; /* Very dark violet */
+  --color-secondary-900: #3B0764; /* Darkest violet */
+
+  /* Accent Colors */
+  --color-accent: #10B981; /* Medical green - accent */
+  --color-accent-50: #ECFDF5; /* Very light green */
+  --color-accent-100: #D1FAE5; /* Light green */
+  --color-accent-200: #A7F3D0; /* Medium light green */
+  --color-accent-300: #6EE7B7; /* Medium green */
+  --color-accent-400: #34D399; /* Medium dark green */
+  --color-accent-500: #10B981; /* Medical green (accent) */
+  --color-accent-600: #059669; /* Dark green */
+  --color-accent-700: #047857; /* Darker green */
+  --color-accent-800: #065F46; /* Very dark green */
+  --color-accent-900: #064E3B; /* Darkest green */
+
+  /* Background Colors */
+  --color-background: #0F172A; /* Deep slate - background */
+  --color-background-50: #F8FAFC; /* Very light slate */
+  --color-background-100: #F1F5F9; /* Light slate */
+  --color-background-200: #E2E8F0; /* Medium light slate */
+  --color-background-300: #CBD5E1; /* Medium slate */
+  --color-background-400: #94A3B8; /* Medium dark slate */
+  --color-background-500: #64748B; /* Dark slate */
+  --color-background-600: #475569; /* Darker slate */
+  --color-background-700: #334155; /* Very dark slate */
+  --color-background-800: #1E293B; /* Deep dark slate */
+  --color-background-900: #0F172A; /* Deep slate (background) */
+
+  /* Surface Colors */
+  --color-surface: #1E293B; /* Elevated dark surface - surface */
+  --color-surface-50: #F8FAFC; /* Very light surface */
+  --color-surface-100: #F1F5F9; /* Light surface */
+  --color-surface-200: #E2E8F0; /* Medium light surface */
+  --color-surface-300: #CBD5E1; /* Medium surface */
+  --color-surface-400: #94A3B8; /* Medium dark surface */
+  --color-surface-500: #64748B; /* Dark surface */
+  --color-surface-600: #475569; /* Darker surface */
+  --color-surface-700: #334155; /* Very dark surface */
+  --color-surface-800: #1E293B; /* Elevated dark surface (surface) */
+  --color-surface-900: #0F172A; /* Darkest surface */
+
+  /* Text Colors */
+  --color-text-primary: #F8FAFC; /* Near-white - text primary */
+  --color-text-secondary: #94A3B8; /* Muted slate - text secondary */
+  --color-text-tertiary: #64748B; /* Medium slate - text tertiary */
+  --color-text-quaternary: #475569; /* Dark slate - text quaternary */
+
+  /* Status Colors */
+  --color-success: #22C55E; /* Vibrant green - success */
+  --color-success-50: #F0FDF4; /* Very light success green */
+  --color-success-100: #DCFCE7; /* Light success green */
+  --color-success-200: #BBF7D0; /* Medium light success green */
+  --color-success-300: #86EFAC; /* Medium success green */
+  --color-success-400: #4ADE80; /* Medium dark success green */
+  --color-success-500: #22C55E; /* Vibrant green (success) */
+  --color-success-600: #16A34A; /* Dark success green */
+  --color-success-700: #15803D; /* Darker success green */
+  --color-success-800: #166534; /* Very dark success green */
+  --color-success-900: #14532D; /* Darkest success green */
+
+  --color-warning: #F59E0B; /* Amber - warning */
+  --color-warning-50: #FFFBEB; /* Very light warning amber */
+  --color-warning-100: #FEF3C7; /* Light warning amber */
+  --color-warning-200: #FDE68A; /* Medium light warning amber */
+  --color-warning-300: #FCD34D; /* Medium warning amber */
+  --color-warning-400: #FBBF24; /* Medium dark warning amber */
+  --color-warning-500: #F59E0B; /* Amber (warning) */
+  --color-warning-600: #D97706; /* Dark warning amber */
+  --color-warning-700: #B45309; /* Darker warning amber */
+  --color-warning-800: #92400E; /* Very dark warning amber */
+  --color-warning-900: #78350F; /* Darkest warning amber */
+
+  --color-error: #EF4444; /* Critical red - error */
+  --color-error-50: #FEF2F2; /* Very light error red */
+  --color-error-100: #FEE2E2; /* Light error red */
+  --color-error-200: #FECACA; /* Medium light error red */
+  --color-error-300: #FCA5A5; /* Medium error red */
+  --color-error-400: #F87171; /* Medium dark error red */
+  --color-error-500: #EF4444; /* Critical red (error) */
+  --color-error-600: #DC2626; /* Dark error red */
+  --color-error-700: #B91C1C; /* Darker error red */
+  --color-error-800: #991B1B; /* Very dark error red */
+  --color-error-900: #7F1D1D; /* Darkest error red */
+
+  /* Border Colors */
+  --color-border: rgba(148, 163, 184, 0.2); /* Strategic border color */
+  --color-border-light: rgba(148, 163, 184, 0.1); /* Light border */
+  --color-border-medium: rgba(148, 163, 184, 0.3); /* Medium border */
+  --color-border-strong: rgba(148, 163, 184, 0.5); /* Strong border */
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  
+  body {
+    @apply bg-background text-text-primary font-body;
+    font-family: 'Inter', sans-serif;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Inter', sans-serif;
+  }
+
+  .font-data {
+    font-family: 'JetBrains Mono', monospace;
+  }
+}
+
+@layer components {
+  .clinical-shadow {
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+  }
+
+  .clinical-border {
+    border: 1px solid var(--color-border);
+  }
+
+  .clinical-transition {
+    transition: all 150ms ease-out;
+  }
+
+  .clinical-transition-slow {
+    transition: all 300ms ease-out;
+  }
+
+  .pulse-alert {
+    animation: pulse-clinical 2s infinite;
+  }
+
+  @keyframes pulse-clinical {
+    0%, 100% {
+      opacity: 1;
+    }
+    50% {
+      opacity: 0.7;
+    }
+  }
+}
